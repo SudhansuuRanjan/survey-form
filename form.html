@@ -1,0 +1,234 @@
+<style>
+    #clg{
+        font-size:50px ;
+    }
+  header {
+    background-color: hsl(180, 90%, 35%);
+    color: #FFFFFF;
+  }
+  h1 {
+    text-indent: 10px;
+    padding-top: 10px;
+  }
+  #edu{
+      padding: 30px;
+  }
+
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 130px;
+  }
+  nav{
+    background-color:hsl(180, 80%, 25%);
+  }
+
+   a{
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+  color: yellow;
+}
+    #outside{
+  background-color: lightgoldenrodyellow;
+  padding-top: 25px;
+  padding-bottom: 25px;
+    }
+    div{
+        padding:10px;
+    }
+    body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+fieldset { 
+  border:1px solid lightgray;
+  margin: 10px;
+  background-color: white;
+ }
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+legend{
+    font-weight:600;
+    border-radius: 10px;
+}
+form {
+  margin: 0 auto;
+  width: 70%;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  }
+  #survey-form{
+      background-color:rgb(223, 255, 255);
+  }
+  textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+  background-color: rgb(252, 252, 238);
+}
+  button{
+    margin: .5em;
+  font-size: 1em;
+  text-transform: capitalize;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  }
+  #resume{
+  margin: .3em;
+  font-size: 14px;
+  text-transform: capitalize;
+  background-color:rgb(167, 167, 167);
+  color: white;
+  border: none;
+  padding: 3px;
+  border-color: rgb(85, 85, 85);
+  border-radius: 3px;  
+  }
+  .button {
+  padding-left: 90px;
+}
+
+  input:focus, textarea:focus {
+  border-color: OrangeRed;
+}
+  #submitbutton{
+  display: flex; 
+  justify-content: center;
+  }
+  footer{
+      background-color:springgreen;
+    text-align: center;
+    padding: 5px;
+  }
+</style>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="clg">National Institute of technology,Patna</h1>
+            <nav id="nav-bar">
+              <ul>
+                <li><a  href="#">Home</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Cultural Activities</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Clubs</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+        
+        <div id="outside"> 
+            <form id="survey-form" action="www.google.com" method="post">
+                <h1 id = "heading">Application For Registration in NITP Clubs</h1>
+                <p><b>Note: </b> Doube check the filled items before submitting.</p> 
+                <fieldset>
+            <legend>Personal Details</legend>
+            <div>
+                <label id = "name-label" for="name">Name: </label>
+                <input  type="text" required id="name" name="user_name" placeholder="Enter name here">
+            </div>
+            <div>
+                <label id = "address-label" for="address">Address: </label>
+                <input  type="text" required id="address" name="Address" placeholder="Enter address here"> 
+            </div>
+            <div>
+                <label id = "email-label" for="email">E-Mail: </label>
+                <input  type="text" required id="email" name="E-Mail" placeholder="Enter email here"> 
+            </div>
+            <div>
+                <label id="number-label" for="phone">Phone Number:</label>
+                <input type="number" id="number" name="user_name" placeholder= "Enter 10 digit number " >  
+            </div>
+            <div>
+                <label id="iq-label" for="iq">Your IQ :</label>
+                <input type="number" id="number" name="iq" placeholder= "Enter your IQ "  min="1">  
+            </div>
+            <div>
+                <label id ="gender-label" for="gender">Gender</label>
+                <p>
+                    <input  type="radio" name="gender" value="male" checked>Male <br>
+                    <input  type="radio" name="gender" value="female" >Female <br>
+                    <input  type="radio" name="gender" value="other" >Other <br>
+                </p>
+            </div>
+            <label for="Date of birth">Date of Birth: </label>
+            <input type="date">
+        </fieldset>
+        <fieldset>
+            <legend>Achievements</legend>
+            <label for="Achievements">Check All That Apply</label>
+            <p>
+            <input type="checkbox" name="JEE" value="JEE" checked> I have cleared JEE Main.<br>
+            <input type="checkbox" name="Olympiad" value="Olymiad"> I cleared OLYMPIAD.<br>
+            <input type="checkbox" name="Kvpy" value="Kvpy"> I have been awarded KVPY fellowship.<br>
+            <input type="checkbox" name="NTSE" value="NTSE"> I have qualified NTSE.<br>
+            </p>
+        </fieldset>
+        <fieldset>
+            
+            <legend>Affiliations</legend>
+            <div>
+            <p>
+                <label for="education" >Education Level Completed:</label>
+                <select id="dropdown1" id="edu">
+            <option value="University">University</option>
+            <option value="College">College</option>
+            <option value="Secondary">High School</option>  
+            <option value="None">Polytechnic</option>
+            </select>
+            <label for="interests">Your Interest:</label>
+                <select id="dropdown1">
+            <option value="Robotics">Robotics Club</option>
+            <option value="Hackslash">HackSlash Club</option>
+            <option value="IEEE">IEEE Club</option>  
+            <option value="Saptak">Saptak Club</option>
+            </select>
+            </p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Descriptive Fields</legend>
+            <div>
+                <label for="msg"></label>
+                <p> In 50 words or more explain why do you join the club.</p>
+                <textarea id="msg" name="user_message" rows="5" cols="50" placeholder="Enter Text Here"></textarea> 
+            </div>
+            <div>
+                <label for="msg"></label>
+                <p> In 50 words or more explain What do you want from this club.</p>
+                <textarea id="msg" name="user_message" rows="5" cols="50" placeholder="Enter Text Here"></textarea> 
+            </div>
+            <p>Upload your latest resume here:  
+                <button id="resume">Attach Resume</button></p>
+                
+        </fieldset>
+        <div id="submitbutton">
+            <button type="submit" id="submit">Send your application</button>   </div>
+            </form>
+        </div>
+        <footer id="footer"><p>&copy;NITP Club Comitee  | <a href="www.about.com">About</a> | <a href="www.about.com">Terms of Use</a> | <a href="www.about.com">Privacy Policy</a> </p></footer>
+        <script>
+            alert("This id my first webpage So, you find any faults please compromise ")
+        </script>
+      </body>
+</html>
